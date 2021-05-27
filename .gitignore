@@ -2,3 +2,4 @@
 node_modules/
 .rubocop.yml 
 .stylelintrc.json
+package-lock.json
