@@ -73,7 +73,7 @@ class ExpendituresController < ApplicationController
       return if logged_in?
 
       flash[:alert] = 'To continue, please Sign In or Sign Up if you don\'t have an account '
-      redirect_to '/log'
+      redirect_to '/login'
     end
 
     def expenditures_created

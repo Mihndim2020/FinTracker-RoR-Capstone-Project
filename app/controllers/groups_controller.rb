@@ -64,7 +64,7 @@ class GroupsController < ApplicationController
       return if logged_in?
   
       flash[:alert] = 'To continue, please Sign In or Sign Up if you don\'t have an account '
-      redirect_to '/log'
+      redirect_to '/login'
     end 
     # Use callbacks to share common setup or constraints between actions.
     def set_group
