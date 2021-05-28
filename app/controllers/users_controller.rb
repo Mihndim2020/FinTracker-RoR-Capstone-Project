@@ -1,9 +1,16 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :authenticate, only: %i[edit update destroy home show]
 
   # GET /users or /users.json
   def index
     @users = User.all
+  end
+
+  def home
+    return unless logged_in?
+
+    redirect_to current_user
   end
 
   # GET /users/1 or /users/1.json
@@ -57,6 +64,13 @@ class UsersController < ApplicationController
   end
 
   private
+    # Check if a user is logged in or is a registered user
+    def authenticate
+      return if logged_in?
+
+      flash[:alert] = 'You need to Sign In or register as a New User to continue'
+      redirect_to '/log'
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -64,6 +78,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :avatar)
     end
 end
