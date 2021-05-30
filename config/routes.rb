@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'users#home'
+  get 'log', to: 'sessions#login'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  get 'logout', to: 'sessions#destroy'
+
   resources :expenditures
   resources :groups
   resources :users
