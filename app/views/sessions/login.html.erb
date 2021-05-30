@@ -1,9 +1,9 @@
-he session login page <br/>
-<button type="button" class="btn btn-primary mt-3">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+ <div class="login-app-name d-flex flex-column align-items-center justify-content-center">
+      <p class="create-new ">
+          FinTrac&copy;
+      </p>
+      <div class="log-sign-btns jusitfy-self-end position-absolute bottom-0">
+          <%=link_to 'Sign In', login_path,class:'btn log-in-btn text-secondary', method: :get %>
+          <%=link_to 'New User', new_user_path,class:'btn sign-up-btn text-secondary', method: :get %>
+      </div>
+  </div>
