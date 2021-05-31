@@ -1,6 +1,11 @@
-  <div class="fixed-top">
+  <%
+=begin%>
+ remove fixed-top from the div class not to remove it from the normal view 
+<%
+=end%>
+  <div class="">
 
-    <nav class="navbar navbar-dark" style="background-color: #3470B6;">
+    <nav class="navbar navbar-dark py-2" style="background-color: #3470B6;">
       <h4 class="text-white h5 font-italic"> Fintracker&copy </h4>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,6 +15,7 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-dark p-4">
         <h5 class="text-white h4">Collapsed content</h5>
+        <h5 class="text-white h4">this is another collapseable content</h5>
         <span class="text-muted">Toggleable via the navbar brand.</span>
       </div>
     </div>
