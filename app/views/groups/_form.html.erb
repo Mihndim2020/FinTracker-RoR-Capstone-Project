@@ -11,17 +11,15 @@
     </div>
   <% end %>
 
-<div class="field">
-    <%= form.label :icon,style:"display:none" %>
-    <%= form.file_field :icon, direct_upload: true, accept: "image/jpeg, image/gif, image/png" %>
-    <hr>
+<div class="field my-2">
+    <%= form.label :icon, style:"display:none" %>
+    <%= form.file_field :icon, direct_upload: true, accept: "image/jpeg, image/gif, image/png", class: 'name-input' %>
 </div>
-<div class="field">
-    <%= form.label :name,style:"display:none" %>
-    <%= form.text_field :name,placeholder:"Group name" %>
-    <hr>
+<div class="field my-3">
+    <%= form.label :name, style:"display:none" %>
+    <%= form.text_field :name, placeholder:"Group name", class: 'name-input' %>
 </div>
 <div class="actions">
-    <%= form.submit  class:"btn btn-primary" %>
+    <%= form.submit  class:'btn btn-outline-primary new-user-btn text-dark mt-0' %>
 </div>
 <% end %>
