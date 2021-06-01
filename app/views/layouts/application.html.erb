@@ -15,15 +15,16 @@
      <title>Fintracker</title>
   </head>
   <body>
-  
-    <%= show_notice %>
-    <%= show_alert %>
 
+    <div class = "canvas"> 
 
-    <div class = "canvas">
     <div>
     <%=render 'partials/nav'%>
     </div>
+
+    <%= show_notice %>
+    <%= show_alert %>
+
     <%= yield %>
     </div>
    

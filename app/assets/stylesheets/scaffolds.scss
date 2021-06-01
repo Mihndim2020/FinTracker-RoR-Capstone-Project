@@ -12,6 +12,23 @@ body {
   margin-top: 40px;
 }
 
+.name-input {
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 1px solid #ebebeb;
+  width: 18em;
+  height: 2.5em;
+  padding-left: 7px;
+}
+
+.name-input:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  color: #222; 
+}
+
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -20,7 +37,8 @@ body, p, ol, ul, td {
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px; }
+  font-size: 11px;
+ }
 
 a {
   color: #000; }
@@ -40,7 +58,8 @@ td {
 
 div.field,
 div.actions {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+ }
 
 #notice {
   color: green; }
