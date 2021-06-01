@@ -10759,3 +10759,20 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 1.5ms | Allocations: 8146)
 
 
+Started GET "/users/1/edit" for ::1 at 2021-06-01 07:41:27 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:76:in `set_user'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.9ms | Allocations: 788)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.9ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 5658)
+Completed 200 OK in 35ms (Views: 27.9ms | ActiveRecord: 1.8ms | Allocations: 8170)
+
+
