@@ -8,6 +8,6 @@ module GroupsHelper
   end
 
   def icon_url_for_group(group)
-    group.icon.key.nil? ? 'No-profile-icon.png' : group.icon
+    group.icon.key.nil? ? 'default-profile-pic.png' : group.icon
   end
 end

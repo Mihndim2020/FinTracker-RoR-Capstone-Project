@@ -1,6 +1,8 @@
-<h1>Editing Group</h1>
+<h1 class="my-2 text-center create-new">Editing Group</h1>
 
+<div class =  "d-flex flex-column align-items-center justify-items-center">
 <%= render 'form', group: @group %>
+</div>
 
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+<%= link_to 'Show', @group, class:'btn btn-outline-primary d-inline new-user-btn text-dark ml-5' %> 
+<%= link_to 'Back', groups_path, class:'btn btn-outline-primary d-inline new-user-btn text-dark' %>
