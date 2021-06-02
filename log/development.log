@@ -26730,3 +26730,354 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
 
 
+Started GET "/expenditures" for ::1 at 2021-06-02 15:35:06 -0400
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (1.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 38.9ms | Allocations: 9892)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 45.5ms | Allocations: 11468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 15420)
+Completed 200 OK in 86ms (Views: 38.2ms | ActiveRecord: 31.5ms | Allocations: 20455)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f26cef67a7dc5dea0718456d99c82459a65bb62/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:35:07 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f26cef67a7dc5dea0718456d99c82459a65bb62", "filename"=>"7-2-health-transparent-thumb"}
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 91hpxhmggm2mj5lk7zck1ex68653 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms | Allocations: 2776)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4ccd026004e794c09165ec6d58e7d9fd53fb41eb/school.png" for ::1 at 2021-06-02 15:35:07 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4ccd026004e794c09165ec6d58e7d9fd53fb41eb", "filename"=>"school"}
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 43tcvz4dtt2a0cst4kn7ovw1snr1 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 1641)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b2258d7042852589fdc163f243f0509aab641baa/construction.jpeg" for ::1 at 2021-06-02 15:35:07 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b2258d7042852589fdc163f243f0509aab641baa", "filename"=>"construction"}
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: tuuagx0217zei09t4amd7d49ml5m (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 1641)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:35:07 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png" for ::1 at 2021-06-02 15:35:07 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg" for ::1 at 2021-06-02 15:35:07 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/" for ::1 at 2021-06-02 15:36:48 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 1777)
+
+
+Started GET "/users/1" for ::1 at 2021-06-02 15:36:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:76:in `set_user'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mExpenditure Load (2.5ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5978)
+Completed 200 OK in 29ms (Views: 17.9ms | ActiveRecord: 5.1ms | Allocations: 7728)
+
+
+Started GET "/users" for ::1 at 2021-06-02 15:36:55 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 1482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 5326)
+Completed 200 OK in 56ms (Views: 38.3ms | ActiveRecord: 6.1ms | Allocations: 5911)
+
+
+Started GET "/users/1" for ::1 at 2021-06-02 15:37:11 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:76:in `set_user'
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mExpenditure Load (2.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 6961)
+Completed 200 OK in 63ms (Views: 30.4ms | ActiveRecord: 11.8ms | Allocations: 8712)
+
+
+Started GET "/expenditures" for ::1 at 2021-06-02 15:37:19 -0400
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (2.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (2.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (7.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mGroup Load (2.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (3.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (3.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 65.3ms | Allocations: 10870)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 77.6ms | Allocations: 12421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | Allocations: 16373)
+Completed 200 OK in 97ms (Views: 56.6ms | ActiveRecord: 31.6ms | Allocations: 18206)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:37:20 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png" for ::1 at 2021-06-02 15:37:20 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg" for ::1 at 2021-06-02 15:37:20 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:37:24 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg" for ::1 at 2021-06-02 15:37:24 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png" for ::1 at 2021-06-02 15:37:24 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/expenditures?ungrouped=true" for ::1 at 2021-06-02 15:37:26 -0400
+Processing by ExpendituresController#index as HTML
+  Parameters: {"ungrouped"=>"true"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."group_id" IS NULL AND "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (2.5ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."group_id" IS NULL AND "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  Rendered expenditures/_expenditure.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 6521)
+Completed 200 OK in 44ms (Views: 29.1ms | ActiveRecord: 6.6ms | Allocations: 8717)
+
+
+Started GET "/groups" for ::1 at 2021-06-02 15:37:30 -0400
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/groups/_group.html.erb:1
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/groups/_group.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/groups_helper.rb:11:in `icon_url_for_group'
+  [1m[36mActiveStorage::Blob Load (2.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/groups_helper.rb:11:in `icon_url_for_group'
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/groups_helper.rb:11:in `icon_url_for_group'
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/groups_helper.rb:11:in `icon_url_for_group'
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/groups_helper.rb:11:in `icon_url_for_group'
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/groups_helper.rb:11:in `icon_url_for_group'
+  Rendered groups/_group.html.erb (Duration: 50.6ms | Allocations: 9713)
+  Rendered groups/index.html.erb within layouts/application (Duration: 58.9ms | Allocations: 10931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | Allocations: 14898)
+Completed 200 OK in 91ms (Views: 57.3ms | ActiveRecord: 22.4ms | Allocations: 16695)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png" for ::1 at 2021-06-02 15:37:30 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg" for ::1 at 2021-06-02 15:37:30 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:37:30 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/groups/new" for ::1 at 2021-06-02 15:37:32 -0400
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (Duration: 12.4ms | Allocations: 1094)
+  Rendered groups/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 6315)
+Completed 200 OK in 51ms (Views: 38.6ms | ActiveRecord: 1.3ms | Allocations: 8774)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg" for ::1 at 2021-06-02 15:37:32 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png" for ::1 at 2021-06-02 15:37:32 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:37:32 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTk6NDA6MDcuMTM0WiIsInB1ciI6ImJsb2Jfa2V5In19--d2799e7098dc8db7ad1594a426a71c4e09ca0c98/construction.jpeg" for ::1 at 2021-06-02 15:37:37 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjA5NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--091129bb5e3f5aa427e88f56b0de013a66e41a3a/7-2-health-transparent-thumb.png" for ::1 at 2021-06-02 15:37:37 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAyVDE5OjQwOjA3LjEwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--db6be67067f3de49dfc5b0cf0cd0cfa74471b7f3/school.png" for ::1 at 2021-06-02 15:37:37 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+

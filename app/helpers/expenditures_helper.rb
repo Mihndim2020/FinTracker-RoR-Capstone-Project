@@ -8,5 +8,4 @@ module ExpendituresHelper
   def total_expenses(expenditures)
     expenditures.inject(0) { |sum, expenditure| sum + expenditure.amount }
   end
-
 end
