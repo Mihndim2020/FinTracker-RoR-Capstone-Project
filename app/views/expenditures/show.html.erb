@@ -1,5 +1,5 @@
 <% provide(:title, "Expenditures") %>
-<div class="container d-flex justify-content-center">
+<div class="container d-flex flex-column justify-content-center">
     <div class="card text-center mt-5">
         <div class="card-header h4">
             <%= @expenditure.name %>
@@ -20,5 +20,11 @@
             Author: <%= @expenditure.author.name %><br />
             When: <%=time_ago_in_words(@expenditure.created_at.localtime)%>
         </div>
+    </div>       
+        
+   <div class = "mt-5 align-self-center">
+    <%= link_to 'Back', expenditures_path, class:'btn btn-outline-primary d-inline new-user-btn text-dark ml-5 my-5' %>
     </div>
 </div>
+
+
