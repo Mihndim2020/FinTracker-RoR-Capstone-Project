@@ -1,4 +1,3 @@
 /config/master.key
 node_modules/
-.rubocop.yml 
 package-lock.json
