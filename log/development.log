@@ -20732,3 +20732,898 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
 
 
+Started GET "/expenditures/5" for ::1 at 2021-06-02 11:57:32 -0400
+Processing by ExpendituresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.2ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE Expenditure Load (0.0ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:16:in `show'
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/expenditures/show.html.erb:20
+  Rendered expenditures/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.5ms | Allocations: 149)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5654)
+Completed 200 OK in 35ms (Views: 17.0ms | ActiveRecord: 3.9ms | Allocations: 9942)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 11:57:34 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (3.6ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (3.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 14.7ms | Allocations: 2283)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 18.5ms | Allocations: 2677)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 7411)
+Completed 200 OK in 54ms (Views: 28.0ms | ActiveRecord: 9.9ms | Allocations: 9634)
+
+
+Started GET "/expenditures/5" for ::1 at 2021-06-02 11:57:50 -0400
+Processing by ExpendituresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (9.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE Expenditure Load (0.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:16:in `show'
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/expenditures/show.html.erb:20
+  Rendered expenditures/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4707)
+Completed 200 OK in 63ms (Views: 13.2ms | ActiveRecord: 17.1ms | Allocations: 8224)
+
+
+Started GET "/expenditures" for ::1 at 2021-06-02 11:57:58 -0400
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (4.8ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (3.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (2.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 34.5ms | Allocations: 4576)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 76.0ms | Allocations: 6451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 85.9ms | Allocations: 10358)
+Completed 200 OK in 119ms (Views: 67.5ms | ActiveRecord: 27.5ms | Allocations: 12320)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--118cca8060746d50d1bb4c67d8605e08737f5db2/construction.jpeg" for ::1 at 2021-06-02 11:57:58 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--118cca8060746d50d1bb4c67d8605e08737f5db2", "filename"=>"construction"}
+  [1m[36mActiveStorage::Blob Load (6.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: m3fyaubrwudywdjrlhh9hv1hscjr (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MDI6NTguOTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--62471e229f976f09162de4132577e7c5d197931c/construction.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MDI6NTguOTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--62471e229f976f09162de4132577e7c5d197931c/construction.jpeg
+Completed 302 Found in 22ms (ActiveRecord: 6.5ms | Allocations: 6848)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MDI6NTguOTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--62471e229f976f09162de4132577e7c5d197931c/construction.jpeg" for ::1 at 2021-06-02 11:57:58 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MDI6NTguOTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--62471e229f976f09162de4132577e7c5d197931c/construction.jpeg" for ::1 at 2021-06-02 11:58:02 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 11:59:18 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (2.8ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.9ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 7144)
+Completed 200 OK in 42ms (Views: 25.7ms | ActiveRecord: 7.3ms | Allocations: 9938)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 11:59:53 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (0.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.5ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.5ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 7107)
+Completed 200 OK in 32ms (Views: 21.0ms | ActiveRecord: 3.7ms | Allocations: 9899)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:00:48 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 7.0ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 7151)
+Completed 200 OK in 34ms (Views: 22.4ms | ActiveRecord: 3.7ms | Allocations: 9949)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:01:43 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.8ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 7151)
+Completed 200 OK in 36ms (Views: 23.2ms | ActiveRecord: 4.8ms | Allocations: 9948)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:02:43 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (0.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 11.4ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 7147)
+Completed 200 OK in 39ms (Views: 27.6ms | ActiveRecord: 4.2ms | Allocations: 9943)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:02:54 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.0ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.5ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 7150)
+Completed 200 OK in 35ms (Views: 25.0ms | ActiveRecord: 3.9ms | Allocations: 9944)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:03:21 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.7ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 7112)
+Completed 200 OK in 32ms (Views: 21.0ms | ActiveRecord: 4.2ms | Allocations: 9905)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:03:22 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 6.1ms | Allocations: 1878)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5851)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 3.4ms | Allocations: 7882)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:03:35 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.4ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 14.6ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.5ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 7111)
+Completed 200 OK in 43ms (Views: 25.1ms | ActiveRecord: 5.0ms | Allocations: 9902)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:04:16 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.2ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.9ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 7150)
+Completed 200 OK in 35ms (Views: 24.8ms | ActiveRecord: 3.7ms | Allocations: 9946)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:04:53 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.3ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.9ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 7139)
+Completed 200 OK in 40ms (Views: 28.1ms | ActiveRecord: 4.3ms | Allocations: 9931)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:05:16 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (0.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 13.5ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 7152)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 4.8ms | Allocations: 9950)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:05:27 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.5ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 14.6ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 19.2ms | Allocations: 2691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 7151)
+Completed 200 OK in 47ms (Views: 32.6ms | ActiveRecord: 5.1ms | Allocations: 9948)
+
+
+Started GET "/expenditures" for ::1 at 2021-06-02 12:06:06 -0400
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (2.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (2.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 25.9ms | Allocations: 3547)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 44.0ms | Allocations: 5428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 9904)
+Completed 200 OK in 77ms (Views: 43.4ms | ActiveRecord: 15.9ms | Allocations: 13534)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--118cca8060746d50d1bb4c67d8605e08737f5db2/construction.jpeg" for ::1 at 2021-06-02 12:06:06 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--118cca8060746d50d1bb4c67d8605e08737f5db2", "filename"=>"construction"}
+  [1m[36mActiveStorage::Blob Load (2.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: m3fyaubrwudywdjrlhh9hv1hscjr (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms | Allocations: 1642)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg" for ::1 at 2021-06-02 12:06:06 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/expenditures" for ::1 at 2021-06-02 12:06:08 -0400
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (3.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (2.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 19.6ms | Allocations: 3325)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 4854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 8799)
+Completed 200 OK in 70ms (Views: 33.2ms | ActiveRecord: 17.0ms | Allocations: 10629)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg" for ::1 at 2021-06-02 12:06:08 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:06:12 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (3.6ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (4.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 18.6ms | Allocations: 3143)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 22.9ms | Allocations: 3580)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 7577)
+Completed 200 OK in 74ms (Views: 34.6ms | ActiveRecord: 15.8ms | Allocations: 9736)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg" for ::1 at 2021-06-02 12:06:12 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:06:25 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (4.1ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.4ms | Allocations: 1878)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 5851)
+Completed 200 OK in 41ms (Views: 17.8ms | ActiveRecord: 8.9ms | Allocations: 7881)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:06:50 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.7ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 7142)
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 4.4ms | Allocations: 9937)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:07:41 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.7ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.7ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 7173)
+Completed 200 OK in 46ms (Views: 27.9ms | ActiveRecord: 5.2ms | Allocations: 9972)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:08:04 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.6ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.5ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 1.5ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 7169)
+Completed 200 OK in 37ms (Views: 26.0ms | ActiveRecord: 4.7ms | Allocations: 9967)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:08:18 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.5ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (3.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 10.1ms | Allocations: 2283)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 11.9ms | Allocations: 2709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 7169)
+Completed 200 OK in 46ms (Views: 32.3ms | ActiveRecord: 6.1ms | Allocations: 9966)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:08:49 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.4ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 7.6ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.5ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 7164)
+Completed 200 OK in 30ms (Views: 19.2ms | ActiveRecord: 4.4ms | Allocations: 9961)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:08:51 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.2ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 6.8ms | Allocations: 1878)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2027)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5873)
+Completed 200 OK in 26ms (Views: 16.4ms | ActiveRecord: 3.6ms | Allocations: 7904)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:09:20 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 11.6ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 14.3ms | Allocations: 2707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 7155)
+Completed 200 OK in 45ms (Views: 31.2ms | ActiveRecord: 5.3ms | Allocations: 9947)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:09:22 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.2ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 7.5ms | Allocations: 1878)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2027)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5861)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 4.0ms | Allocations: 7892)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:09:42 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.3ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 7.0ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 7130)
+Completed 200 OK in 34ms (Views: 23.1ms | ActiveRecord: 3.4ms | Allocations: 9922)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:10:10 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.0ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 7.6ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 1.1ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 7170)
+Completed 200 OK in 37ms (Views: 25.9ms | ActiveRecord: 3.6ms | Allocations: 9966)
+
+
+Started GET "/expenditures/5" for ::1 at 2021-06-02 12:10:19 -0400
+Processing by ExpendituresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (2.4ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE Expenditure Load (0.0ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:16:in `show'
+  [1m[36mGroup Load (2.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/expenditures/show.html.erb:20
+  Rendered expenditures/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5034)
+Completed 200 OK in 45ms (Views: 18.1ms | ActiveRecord: 6.1ms | Allocations: 8681)
+
+
+Started GET "/expenditures" for ::1 at 2021-06-02 12:10:22 -0400
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (2.0ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (2.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 19.4ms | Allocations: 4072)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 34.7ms | Allocations: 6416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.3ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 10361)
+Completed 200 OK in 64ms (Views: 37.2ms | ActiveRecord: 13.2ms | Allocations: 12324)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg" for ::1 at 2021-06-02 12:10:22 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiVE5tZVdGMVluSjNkV1I1ZDJScWNteG9hRGxvZGpGb2MyTnFjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDJUMTY6MTE6MDYuODQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--169b13905b3440294b5dc4f0ad9b47c171c9e8e4/construction.jpeg" for ::1 at 2021-06-02 12:10:26 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:12:24 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 8.4ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.7ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7169)
+Completed 200 OK in 35ms (Views: 22.0ms | ActiveRecord: 4.7ms | Allocations: 9966)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:12:47 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.0ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.3ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.5ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 7138)
+Completed 200 OK in 34ms (Views: 23.8ms | ActiveRecord: 3.8ms | Allocations: 9930)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:13:01 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.4ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 13.3ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 7154)
+Completed 200 OK in 41ms (Views: 30.0ms | ActiveRecord: 4.5ms | Allocations: 9946)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:13:16 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.2ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 7.1ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2706)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 7127)
+Completed 200 OK in 33ms (Views: 22.3ms | ActiveRecord: 5.0ms | Allocations: 9919)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:13:26 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.6ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 15.3ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 18.1ms | Allocations: 2707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 7129)
+Completed 200 OK in 50ms (Views: 34.5ms | ActiveRecord: 5.2ms | Allocations: 9922)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:13:36 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.4ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 11.6ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 7174)
+Completed 200 OK in 47ms (Views: 32.5ms | ActiveRecord: 4.9ms | Allocations: 9972)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:13:45 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (6.4ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.5ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2706)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 7163)
+Completed 200 OK in 54ms (Views: 22.5ms | ActiveRecord: 11.5ms | Allocations: 9956)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:14:10 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 10.7ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 13.4ms | Allocations: 2706)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 7165)
+Completed 200 OK in 42ms (Views: 25.0ms | ActiveRecord: 7.9ms | Allocations: 9958)
+
+
+Started GET "/expenditures/5/edit" for ::1 at 2021-06-02 12:14:20 -0400
+Processing by ExpendituresController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExpenditure Load (1.2ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."id" = $1 ORDER BY "expenditures"."created_at" DESC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenditures_controller.rb:89:in `set_expenditure'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/edit.html.erb within layouts/application
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY "groups"."name" ASC[0m
+  ↳ app/views/expenditures/_form.html.erb:26
+  Rendered expenditures/_form.html.erb (Duration: 9.4ms | Allocations: 2282)
+  Rendered expenditures/edit.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 7167)
+Completed 200 OK in 34ms (Views: 21.3ms | ActiveRecord: 4.4ms | Allocations: 9965)
+
+
