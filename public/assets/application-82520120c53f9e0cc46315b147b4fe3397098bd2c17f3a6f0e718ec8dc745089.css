@@ -10,7 +10,7 @@ body {
   position: relative;
   height: 600px;
   width: 380px;
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -30,7 +30,6 @@ body {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background: #f8f8f8;
   border: 1px solid #c6c6c6;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   color: #222;
 }
 
@@ -41,7 +40,11 @@ body {
 }
 
 /* line 37, app/assets/stylesheets/scaffolds.scss */
-body, p, ol, ul, td {
+body,
+p,
+ol,
+ul,
+td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -67,7 +70,7 @@ a:visited {
 /* line 54, app/assets/stylesheets/scaffolds.scss */
 a:hover {
   color: #fff;
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
 }
 
 /* line 58, app/assets/stylesheets/scaffolds.scss */
@@ -128,6 +131,7 @@ div.actions {
 label {
   display: block;
 }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -140,6 +144,5 @@ label {
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
 
  */
