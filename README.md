@@ -37,7 +37,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+Click the [Link](https://obscure-falls-72574.herokuapp.com/) to visit the site.
 
 
 ## Getting Started
