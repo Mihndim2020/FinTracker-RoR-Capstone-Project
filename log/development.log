@@ -28852,3 +28852,87 @@ Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
 Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 1121)
 
 
+Started GET "/expenditures" for ::1 at 2021-06-03 09:56:45 -0400
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExpendituresController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering expenditures/index.html.erb within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "expenditures" WHERE "expenditures"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/expenditures/index.html.erb:5
+  [1m[36mExpenditure Load (0.9ms)[0m  [1m[34mSELECT "expenditures".* FROM "expenditures" WHERE "expenditures"."author_id" = $1 ORDER BY "expenditures"."created_at" DESC[0m  [["author_id", 1]]
+  ↳ app/helpers/expenditures_helper.rb:9:in `inject'
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 ORDER BY "groups"."name" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/expenditures/_expenditure.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Group"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/expenditures_helper.rb:5:in `display_icon'
+  Rendered expenditures/_expenditure.html.erb (Duration: 95.9ms | Allocations: 32631)
+  Rendered expenditures/index.html.erb within layouts/application (Duration: 115.2ms | Allocations: 37801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_nav.html.erb (Duration: 0.7ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 182.1ms | Allocations: 56080)
+Completed 200 OK in 257ms (Views: 154.5ms | ActiveRecord: 59.4ms | Allocations: 72141)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f26cef67a7dc5dea0718456d99c82459a65bb62/7-2-health-transparent-thumb.png" for ::1 at 2021-06-03 09:56:45 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b2258d7042852589fdc163f243f0509aab641baa/construction.jpeg" for ::1 at 2021-06-03 09:56:45 -0400
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4ccd026004e794c09165ec6d58e7d9fd53fb41eb/school.png" for ::1 at 2021-06-03 09:56:45 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f26cef67a7dc5dea0718456d99c82459a65bb62", "filename"=>"7-2-health-transparent-thumb"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4ccd026004e794c09165ec6d58e7d9fd53fb41eb", "filename"=>"school"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b2258d7042852589fdc163f243f0509aab641baa", "filename"=>"construction"}
+  [1m[36mActiveStorage::Blob Load (4.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (16.5ms) [0m[34mGenerated URL for file at key: 91hpxhmggm2mj5lk7zck1ex68653 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDE0OjAxOjQ1LjU5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d28993f64a7e15e7450401fe41c357e00d8c3258/7-2-health-transparent-thumb.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDE0OjAxOjQ1LjU5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d28993f64a7e15e7450401fe41c357e00d8c3258/7-2-health-transparent-thumb.png
+Completed 302 Found in 35ms (ActiveRecord: 4.6ms | Allocations: 8177)
+
+
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: tuuagx0217zei09t4amd7d49ml5m (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDNUMTQ6MDE6NDUuNjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6809495863491570e3dfed3b28865d32a2281bd1/construction.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDNUMTQ6MDE6NDUuNjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6809495863491570e3dfed3b28865d32a2281bd1/construction.jpeg
+Completed 302 Found in 51ms (ActiveRecord: 34.6ms | Allocations: 12661)
+
+
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: 43tcvz4dtt2a0cst4kn7ovw1snr1 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAzVDE0OjAxOjQ1LjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--315e309494c3cc1844f8234563bad3c4d3925ef2/school.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAzVDE0OjAxOjQ1LjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--315e309494c3cc1844f8234563bad3c4d3925ef2/school.png
+Completed 302 Found in 64ms (ActiveRecord: 39.2ms | Allocations: 14975)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPVEZvY0hob2JXZG5iVEp0YWpWc2F6ZDZZMnN4WlhnMk9EWTFNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdE1pMW9aV0ZzZEdndGRISmhibk53WVhKbGJuUXRkR2gxYldJdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTFRJdGFHVmhiSFJvTFhSeVlXNXpjR0Z5Wlc1MExYUm9kVzFpTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDE0OjAxOjQ1LjU5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d28993f64a7e15e7450401fe41c357e00d8c3258/7-2-health-transparent-thumb.png" for ::1 at 2021-06-03 09:56:45 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORE4wWTNaNk5HUjBkREpoTUdOemREUnJiamR2ZG5jeGMyNXlNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OamFHOXZiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmphRzl2YkM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIxLTA2LTAzVDE0OjAxOjQ1LjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--315e309494c3cc1844f8234563bad3c4d3925ef2/school.png" for ::1 at 2021-06-03 09:56:45 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFYxWVdkNE1ESXhOM3BsYVRBNWREUmhiV1EzWkRRNWJXdzFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OdmJuTjBjblZqZEdsdmJpNXFjR1ZuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkamIyNXpkSEoxWTNScGIyNHVhbkJsWndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjEtMDYtMDNUMTQ6MDE6NDUuNjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6809495863491570e3dfed3b28865d32a2281bd1/construction.jpeg" for ::1 at 2021-06-03 09:56:45 -0400
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"7-2-health-transparent-thumb"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"school"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"construction"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Completed 200 OK in 15ms (ActiveRecord: 0.0ms | Allocations: 2021)
+
+
