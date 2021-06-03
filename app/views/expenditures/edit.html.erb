@@ -1,0 +1,9 @@
+<h1 class="my-3 text-center create-new">Editing Expenditure</h1>
+<div class = "d-flex flex-column align-items-center">
+<%= render 'form', expenditure: @expenditure %>
+
+</div>
+
+<%= link_to 'Show', @expenditure, class:'btn btn-outline-primary text-dark text-decoration-none ml-5' %> 
+<%= link_to 'Back', expenditures_path, class:'btn btn-outline-primary text-dark text-decoration-none ml-4' %>
+

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="my-3 text-center create-new">Users</h1>
+
+<table class="table table-sm table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class =  "d-flex flex-column align-items-center">
+<%= link_to 'New User', new_user_path, class:'btn btn-outline-primary new-user-btn text-dark' %>
+</div>
