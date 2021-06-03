@@ -1,0 +1,30 @@
+<% provide(:title, "Expenditures") %>
+<div class="container d-flex flex-column justify-content-center">
+    <div class="card text-center mt-5">
+        <div class="card-header h4">
+            <%= @expenditure.name %>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Amount: <%= @expenditure.amount %> Francs</h5>
+            <%= link_to expenditure_path, class:"card-link text-decoration-none my-3" do %>
+            <i class="bi bi-arrow-left-square text-dark"></i>
+            <% end %>
+            <%= link_to edit_expenditure_path(@expenditure), class:"card-link text-decoration-none" do %>
+            <i class="bi bi-pencil text-dark "></i>
+            <% end %>
+            <%= link_to @expenditure, method: :delete, data: { confirm: 'Are you sure?'} do %>
+            <i class="bi bi-trash text-dark"></i>
+            <% end %>
+        </div>
+        <div class="card-footer text-muted">
+            Author: <%= @expenditure.author.name %><br />
+            When: <%=time_ago_in_words(@expenditure.created_at.localtime)%>
+        </div>
+    </div>       
+        
+   <div class = "mt-5 align-self-center">
+    <%= link_to 'Back', expenditures_path, class:'btn btn-outline-primary d-inline new-user-btn text-dark ml-5 my-5' %>
+    </div>
+</div>
+
+

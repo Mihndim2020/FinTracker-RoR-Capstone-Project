@@ -1,0 +1,13 @@
+<h1 class="my-5 text-center create-new">Sign In</h1>
+<div class = "new-user-form d-flex flex-column align-items-center">
+<%= form_tag '/login', :id => 'new_session' do %>
+<%= label_tag 'Name',''%>
+<%= text_field_tag :name, nil, placeholder:'Name', class: 'name-input' %>
+</div>
+<div class = "login my-5 d-flex flex-column align-items-center">
+<%= submit_tag 'Sign In',class:'btn btn-outline-primary login-btn text-dark'%>
+</div>
+<%end%>
+<div class="new-user d-flex flex-column align-items-center">
+    <%=link_to 'New User', new_user_path, class:'btn btn-outline-primary new-user-btn text-dark', method: :get %>
+</div>
