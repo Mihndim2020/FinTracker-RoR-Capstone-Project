@@ -58,9 +58,13 @@ a:visited {
   color: #666;
 }
 
-a:hover {
+nav > h4 a:visited {
   color: #fff;
-  background-color: #f5f6f8;
+}
+
+a:hover {
+  color: #f5f6f8;
+  text-decoration: none;
 }
 
 th {
