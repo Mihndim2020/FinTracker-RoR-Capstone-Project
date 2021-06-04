@@ -28,6 +28,8 @@ class ExpendituresController < ApplicationController
   # GET /expenditures/1/edit
   def edit; end
 
+  def home; end 
+
   # POST /expenditures or /expenditures.json
   def create
     @expenditure = Expenditure.new(expenditure_params)
