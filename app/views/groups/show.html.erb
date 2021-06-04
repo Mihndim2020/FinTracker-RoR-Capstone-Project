@@ -20,7 +20,10 @@
             <%= link_to 'javascript:history.back()', class:"card-link text-decoration-none" do %>
             <i class="bi bi-arrow-left-square text-dark"></i>
             <%=display_modify(@group)%>
-            <% end %>
+            <% end %>        
         </div>
     </div>
+</div>
+<div class = "container justify-content-center d-flex mb-2">
+    <%= link_to 'New Group', new_group_path, class:' btn btn-outline-primary text-dark text-decoration-none new-task' %> 
 </div>
