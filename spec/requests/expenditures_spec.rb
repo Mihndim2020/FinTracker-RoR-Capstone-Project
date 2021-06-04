@@ -23,100 +23,100 @@ RSpec.describe '/expenditures', type: :request do
     skip('Add a hash of attributes invalid for your model')
   end
 
-  describe 'GET /index' do
-    it 'renders a successful response' do
-      Expenditure.create! valid_attributes
-      get expenditures_url
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /index' do
+  #   it 'renders a successful response' do
+  #     Expenditure.create! valid_attributes
+  #     get expenditures_url
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'GET /show' do
-    it 'renders a successful response' do
-      expenditure = Expenditure.create! valid_attributes
-      get expenditure_url(expenditure)
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /show' do
+  #   it 'renders a successful response' do
+  #     expenditure = Expenditure.create! valid_attributes
+  #     get expenditure_url(expenditure)
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'GET /edit' do
-    it 'render a successful response' do
-      expenditure = Expenditure.create! valid_attributes
-      get edit_expenditure_url(expenditure)
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /edit' do
+  #   it 'render a successful response' do
+  #     expenditure = Expenditure.create! valid_attributes
+  #     get edit_expenditure_url(expenditure)
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'POST /create' do
-    context 'with valid parameters' do
-      it 'creates a new Expenditure' do
-        expect do
-          post expenditures_url, params: { expenditure: valid_attributes }
-        end.to change(Expenditure, :count).by(1)
-      end
+  # describe 'POST /create' do
+  #   context 'with valid parameters' do
+  #     it 'creates a new Expenditure' do
+  #       expect do
+  #         post expenditures_url, params: { expenditure: valid_attributes }
+  #       end.to change(Expenditure, :count).by(1)
+  #     end
 
-      it 'redirects to the created expenditure' do
-        post expenditures_url, params: { expenditure: valid_attributes }
-        expect(response).to redirect_to(expenditure_url(Expenditure.last))
-      end
-    end
+  #     it 'redirects to the created expenditure' do
+  #       post expenditures_url, params: { expenditure: valid_attributes }
+  #       expect(response).to redirect_to(expenditure_url(Expenditure.last))
+  #     end
+  #   end
 
-    context 'with invalid parameters' do
-      it 'does not create a new Expenditure' do
-        expect do
-          post expenditures_url, params: { expenditure: invalid_attributes }
-        end.to change(Expenditure, :count).by(0)
-      end
+  #   context 'with invalid parameters' do
+  #     it 'does not create a new Expenditure' do
+  #       expect do
+  #         post expenditures_url, params: { expenditure: invalid_attributes }
+  #       end.to change(Expenditure, :count).by(0)
+  #     end
 
-      it "renders a successful response (i.e. to display the 'new' template)" do
-        post expenditures_url, params: { expenditure: invalid_attributes }
-        expect(response).to be_successful
-      end
-    end
-  end
+  #     it "renders a successful response (i.e. to display the 'new' template)" do
+  #       post expenditures_url, params: { expenditure: invalid_attributes }
+  #       expect(response).to be_successful
+  #     end
+  #   end
+  # end
 
-  describe 'PATCH /update' do
-    context 'with valid parameters' do
-      let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
-      end
+  # describe 'PATCH /update' do
+  #   context 'with valid parameters' do
+  #     let(:new_attributes) do
+  #       skip('Add a hash of attributes valid for your model')
+  #     end
 
-      it 'updates the requested expenditure' do
-        expenditure = Expenditure.create! valid_attributes
-        patch expenditure_url(expenditure), params: { expenditure: new_attributes }
-        expenditure.reload
-        skip('Add assertions for updated state')
-      end
+  #     it 'updates the requested expenditure' do
+  #       expenditure = Expenditure.create! valid_attributes
+  #       patch expenditure_url(expenditure), params: { expenditure: new_attributes }
+  #       expenditure.reload
+  #       skip('Add assertions for updated state')
+  #     end
 
-      it 'redirects to the expenditure' do
-        expenditure = Expenditure.create! valid_attributes
-        patch expenditure_url(expenditure), params: { expenditure: new_attributes }
-        expenditure.reload
-        expect(response).to redirect_to(expenditure_url(expenditure))
-      end
-    end
+  #     it 'redirects to the expenditure' do
+  #       expenditure = Expenditure.create! valid_attributes
+  #       patch expenditure_url(expenditure), params: { expenditure: new_attributes }
+  #       expenditure.reload
+  #       expect(response).to redirect_to(expenditure_url(expenditure))
+  #     end
+  #   end
 
-    context 'with invalid parameters' do
-      it "renders a successful response (i.e. to display the 'edit' template)" do
-        expenditure = Expenditure.create! valid_attributes
-        patch expenditure_url(expenditure), params: { expenditure: invalid_attributes }
-        expect(response).to be_successful
-      end
-    end
-  end
+  #   context 'with invalid parameters' do
+  #     it "renders a successful response (i.e. to display the 'edit' template)" do
+  #       expenditure = Expenditure.create! valid_attributes
+  #       patch expenditure_url(expenditure), params: { expenditure: invalid_attributes }
+  #       expect(response).to be_successful
+  #     end
+  #   end
+  # end
 
-  describe 'DELETE /destroy' do
-    it 'destroys the requested expenditure' do
-      expenditure = Expenditure.create! valid_attributes
-      expect do
-        delete expenditure_url(expenditure)
-      end.to change(Expenditure, :count).by(-1)
-    end
+  # describe 'DELETE /destroy' do
+  #   it 'destroys the requested expenditure' do
+  #     expenditure = Expenditure.create! valid_attributes
+  #     expect do
+  #       delete expenditure_url(expenditure)
+  #     end.to change(Expenditure, :count).by(-1)
+  #   end
 
-    it 'redirects to the expenditures list' do
-      expenditure = Expenditure.create! valid_attributes
-      delete expenditure_url(expenditure)
-      expect(response).to redirect_to(expenditures_url)
-    end
-  end
+  #   it 'redirects to the expenditures list' do
+  #     expenditure = Expenditure.create! valid_attributes
+  #     delete expenditure_url(expenditure)
+  #     expect(response).to redirect_to(expenditures_url)
+  #   end
+  # end
 end
