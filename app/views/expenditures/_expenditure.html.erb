@@ -7,7 +7,7 @@
         </div>
         <div class="col-8">
             <div class="card-body h-100">
-                <h5 class="card-title d-flex justify-content-between"><span><%= expenditure.name %> : </span><span class="fw-bold"><%= expenditure.amount %></span> Frs</h5>
+                <h5 class="card-title d-flex justify-content-between"><span><%= expenditure.name %></span> : <span class="fw-bold"><%= expenditure.amount %></span> Frs</h5>
                 <p class="card-text position-relative card-date d-flex justify-content-between"><small class="text-muted"><%=verbose_date(expenditure.created_at) %></small><%= link_to expenditure do%>
                     <i class="bi bi-eye-fill text-secondary"></i>
                     <% end %>

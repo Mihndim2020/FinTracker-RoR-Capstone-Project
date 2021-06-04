@@ -1,5 +1,6 @@
 
   <div class="">
+  
 
     <nav class="navbar navbar-dark py-2" style="background-color: #3470B6;">
       <h4 class="logo-text text-white h5 font-italic"> <%= link_to "Fintracker", root_path %> &copy </h4>
@@ -7,5 +8,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
-    
+
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-primary p-4">
+          <div class="user-profile-ul ">
+              <ul class="list-group">
+                  <li class="list-group-item">
+                      <%=link_to 'All My Expenses', expenditures_path, class: 'nav-link d-flex justify-content-left bi bi-people-fill'%>
+                  </li>
+                  <li class="list-group-item">
+                      <%=link_to 'All My Miscellaneous Expenses', expenditures_path(ungrouped: true), class: 'nav-link d-flex justify-content-left bi bi-list-stars'%>
+                  </li>
+                  <li class="list-group-item">
+                      <%=link_to 'All Groups', groups_path, class: 'nav-link d-flex justify-content-left bi bi-collection-fill'%>
+                  </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+          
   </div>
