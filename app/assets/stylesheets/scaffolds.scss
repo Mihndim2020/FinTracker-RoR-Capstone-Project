@@ -6,7 +6,7 @@ body {
 
 .canvas {
   position: relative;
-  height: 800px;
+  height: auto;
   width: 380px;
   background-color: #f5f6f8;
   margin: 0 auto;
@@ -59,8 +59,12 @@ a:visited {
 }
 
 a:hover {
+  color: #f5f6f8;
+  text-decoration: none;
+}
+
+nav > h4 a:visited {
   color: #fff;
-  background-color: #f5f6f8;
 }
 
 th {
