@@ -2,7 +2,9 @@
 
     <nav class="navbar navbar-dark py-2" style="background-color: #61B625;">
       <h4 class="logo-text text-white h5 font-italic"> <%= link_to "Home", root_path %> </h4>
+      <% if logged_in?%>
       <h4 class="logo-text text-white h5 font-italic"> <%= link_to "Sign Out", logout_path %> </h4>
+      <%end%>
     </nav>
     
   </div>
