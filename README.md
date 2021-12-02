@@ -6,10 +6,8 @@
 > In this project, I implemented an MVP(minimum viable product) with RoR, a mobile app called FinTracker to help track expenses. Here your expenses are grouped in different categories(groups) and the app helps you track what you have spent for the different categories.
 
 ![screenshot](docs/ERD.png)
-![screenshot](docs/home.png)
 ![screenshot](docs/groups.png)
 ![screenshot](docs/expenditures.png)
-![screenshot](docs/signin.png)
 
 ## Built With
 
