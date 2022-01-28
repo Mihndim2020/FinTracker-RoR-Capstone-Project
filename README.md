@@ -35,7 +35,7 @@
 
 ## Live Demo
 
-Click the [Link](https://obscure-falls-72574.herokuapp.com/) to visit the site.
+Click the [Link](https://myfintrackerapp.herokuapp.com/) to visit the site.
 
 
 ## Getting Started
